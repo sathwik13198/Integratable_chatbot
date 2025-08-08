@@ -179,11 +179,17 @@ cd client && npm run build
 1. Make sure you have the `vercel.json` configuration file in your project root (already included)
 
 2. Set up environment variables in Vercel dashboard:
-   - `GEMINI_API_KEY`: Your Gemini API key
+   - Go to your project settings in Vercel
+   - Navigate to the "Environment Variables" tab
+   - Add a variable with name `GEMINI_API_KEY` and value as your actual Gemini API key
 
 3. Deploy to Vercel:
    - Connect your GitHub repository to Vercel
    - Vercel will use the configuration in `vercel.json` to build and deploy both frontend and backend
+
+4. Troubleshooting Vercel Deployment:
+   - If you see `react-scripts: command not found` error, check your `vercel.json` configuration
+   - If you see `Environment Variable references Secret, which does not exist` error, make sure you've added the environment variable in the Vercel dashboard
 
 ### Other Platforms
 

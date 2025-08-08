@@ -26,7 +26,9 @@ This guide covers deploying the chatbot system to various platforms.
 1. Make sure you have the `vercel.json` configuration file in your project root (already included)
 2. Connect your GitHub repository to Vercel
 3. Set environment variables in Vercel dashboard:
-   - `GEMINI_API_KEY`: Your Gemini API key
+   - Go to your project settings in Vercel
+   - Navigate to the "Environment Variables" tab
+   - Add a variable with name `GEMINI_API_KEY` and value as your actual Gemini API key
 4. Vercel will use the configuration in `vercel.json` to build and deploy both frontend and backend as a single project
 5. If you encounter the error `react-scripts: command not found`, make sure your `vercel.json` file is properly configured
 
@@ -226,6 +228,10 @@ jobs:
      - Ensure your `vercel.json` file is in the project root
      - Verify the build command includes `npm install` before `npm run build`
      - Check that the `@vercel/static-build` builder is used for the client
+   - For `Environment Variable references Secret, which does not exist` error:
+     - Make sure to add the environment variable directly in the Vercel dashboard
+     - Go to Project Settings → Environment Variables
+     - Add a variable with name `GEMINI_API_KEY` and value as your actual API key
 
 ### Debug Mode
 Add to your `.env`:
