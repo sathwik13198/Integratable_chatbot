@@ -23,10 +23,12 @@ This guide covers deploying the chatbot system to various platforms.
 
 ### 2. Vercel (Great for Full-Stack)
 
-1. Connect your GitHub repository to Vercel
-2. Vercel will auto-detect the React app
-3. Set environment variables in Vercel dashboard
-4. Deploy both frontend and backend as separate projects
+1. Make sure you have the `vercel.json` configuration file in your project root (already included)
+2. Connect your GitHub repository to Vercel
+3. Set environment variables in Vercel dashboard:
+   - `GEMINI_API_KEY`: Your Gemini API key
+4. Vercel will use the configuration in `vercel.json` to build and deploy both frontend and backend as a single project
+5. If you encounter the error `react-scripts: command not found`, make sure your `vercel.json` file is properly configured
 
 ### 3. Railway
 
@@ -213,10 +215,17 @@ jobs:
 3. **Build Failures**
    - Ensure all dependencies are installed
    - Check Node.js version compatibility
+   - For Vercel: If you see `react-scripts: command not found`, make sure your `vercel.json` file is properly configured with the correct build commands
 
 4. **Port Issues**
    - Use platform-specific port configuration
    - Let the platform set the PORT environment variable
+
+5. **Vercel-Specific Issues**
+   - For `react-scripts: command not found` error:
+     - Ensure your `vercel.json` file is in the project root
+     - Verify the build command includes `npm install` before `npm run build`
+     - Check that the `@vercel/static-build` builder is used for the client
 
 ### Debug Mode
 Add to your `.env`:

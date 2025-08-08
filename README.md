@@ -174,7 +174,20 @@ cd client && npm run build
 
 ## 🚀 Deployment
 
-### Backend Deployment (Render, Vercel, etc.)
+### Vercel Deployment
+
+1. Make sure you have the `vercel.json` configuration file in your project root (already included)
+
+2. Set up environment variables in Vercel dashboard:
+   - `GEMINI_API_KEY`: Your Gemini API key
+
+3. Deploy to Vercel:
+   - Connect your GitHub repository to Vercel
+   - Vercel will use the configuration in `vercel.json` to build and deploy both frontend and backend
+
+### Other Platforms
+
+#### Backend Deployment (Render, Heroku, etc.)
 
 1. Set environment variables:
    - `GEMINI_API_KEY`
@@ -184,7 +197,7 @@ cd client && npm run build
 
 3. Update the frontend API URL to point to your deployed backend
 
-### Frontend Deployment
+#### Frontend Deployment
 
 1. Build the React app:
 ```bash
