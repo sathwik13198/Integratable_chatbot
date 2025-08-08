@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Integration Example</title>
+  
+  <!-- Your website's existing CSS -->
+  <link rel="stylesheet" href="your-styles.css">
+  
+  <!-- Chatbot CSS (from your build) -->
+  <link rel="stylesheet" href="https://your-host.com/path-to-build/static/css/main.[hash].css">
+  
+  <style>
+    /* Your website styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Your Website</h1>
+    <p>This is an example of integrating the chatbot into a regular HTML website.</p>
+    
+    <!-- Your website content -->
+    <div class="your-content">
+      <h2>About Us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
+    </div>
+  </div>
+  
+  <!-- Chatbot root element -->
+  <div id="chatbot-root"></div>
+  
+  <!-- Chatbot script (from your build) -->
+  <script src="https://your-host.com/path-to-build/static/js/main.[hash].js"></script>
+  
+  <!-- Chatbot configuration -->
+  <script>
+    // Initialize the chatbot with your configuration
+    window.initChatbot = {
+      apiUrl: 'https://your-backend-api.com/api/chat', // Replace with your deployed backend URL
+      position: 'bottom-right',
+      theme: 'default',
+      headerTitle: 'Your Company Name',
+      headerSubtitle: 'Ask me anything!',
+      welcomeMessage: '👋 Hello! How can I assist you today?',
+      placeholderText: 'Type your question...',
+      showTimestamp: true,
+      buttonIcon: '💬',
+      closeIcon: '✕'
+    };
+  </script>
+</body>
+</html>

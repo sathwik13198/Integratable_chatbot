@@ -1,0 +1,15 @@
+{
+  "name": "MyTech Solutions",
+  "services": ["Web Development", "AI Chatbots", "Cloud Consulting"],
+  "about": "We help businesses build modern solutions with AI and Cloud.",
+  "contact": {
+    "email": "info@mytechsolutions.com",
+    "phone": "+1-555-123-4567",
+    "address": "123 Tech Street, Innovation City, IC 12345"
+  },
+  "faq": {
+    "services": "We offer web development, AI chatbot integration, and cloud consulting services.",
+    "pricing": "Our pricing varies based on project scope. Contact us for a custom quote.",
+    "timeline": "Project timelines depend on complexity, typically 2-8 weeks for most projects."
+  }
+}
